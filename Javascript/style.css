@@ -1,0 +1,113 @@
+body{
+  display: flexbox;
+  background-color: rgb(188, 220, 220);
+  font-family: Arial, sans-serif;
+ text-align: center;
+  display:inline-block;
+  opacity: 1;
+}
+#header-app{
+  color: black;
+  font-weight: bold;
+  margin: auto;
+  padding: auto;
+  display: flexbox;
+  }
+#button{
+  float:right;
+  background-color: #2bff00;
+  color:black;
+  
+}
+p{
+  color: #611818;
+}
+
+
+a:link{
+  color: red;
+}  
+a:visited{
+  color: #bc6f6f;
+}
+a:hover{
+  font-size: 30px;
+  color: #007bff;
+}
+a:active{
+  color: aquamarine;
+} 
+ 
+
+.image-container {
+  text-align: center;
+  opacity: 0.9;
+}
+
+.image-container img {
+  max-width: 40%;
+  height: auto;
+} 
+
+
+.nav-bar ul li{
+  float: left;
+}
+
+
+.nav-bar ul li :hover{
+background:#185e8d ;
+border-radius: 10px;
+transition:.5s ease all;
+cursor: pointer;
+font-weight: bold;
+padding: .5em;
+text-decoration: none;
+margin: -1px;
+color: white !important;
+opacity: 1;
+transform: scale(.9) rotate(-5deg);}
+
+
+
+
+
+
+.converter {
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  max-width: 400px;
+  background-color: #f4f4f4;
+}
+
+input, select, button {
+  margin: 10px;
+  padding: 5px;
+}
+
+button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.sist{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: large;
+}
+
+#footer{
+  color: rgb(17, 13, 13);
+  font-family: 'Courier New', Courier, monospace;
+  font-size: small;
+}
+
+
+
+
+
+
+
+

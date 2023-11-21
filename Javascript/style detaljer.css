@@ -1,0 +1,50 @@
+a:link{
+    color: red;
+} 
+ a:visited{
+    color: #bc6f6f;
+ }
+ 
+ 
+ a:hover{
+    font-size: 30px;
+    color: #007bff;
+}
+a:active{
+    color: aquamarine;
+} 
+
+body {
+    font-family: Arial, sans-serif;
+    background-attachment :fixed;
+    background-repeat: no-repeat;
+    text-align:center;
+    background-color: rgb(188, 220, 220);
+
+}
+
+h1 {
+    color: #333;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: small-caps;
+    }
+
+.currency-list {
+    margin: 20px auto;
+    width:58%;
+    padding: 20px;
+    max-width: 400px;
+    background-image: linear-gradient(#c0b4b4,#a08e8e);
+    background-color: #fff;
+    border-radius: 1em;
+    box-shadow: inset -1px -1px .9em rgba(0,0,0,.1),inset 1px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+}
+
+.currency-item {
+    margin: 10px 0;
+    font-size: 18px;
+
+}

@@ -1,0 +1,46 @@
+body{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    background-color: rgb(188, 220, 220);
+
+}
+a:link{
+    color: red;
+} 
+ a:visited{
+    color: #bc6f6f;
+ }
+ 
+ 
+ a:hover{
+    font-size: 30px;
+    color: #007bff;
+    
+    
+}
+a:active{
+    color: aquamarine;
+} 
+h1{
+    text-align: center;
+    text-decoration: none;
+}
+.tjänster{
+    text-align: left;
+    }
+    .tjänst1{
+        text-align: left;
+        margin-left: auto;
+        margin-right:auto;
+        margin-top:-1%;
+        margin-bottom: 1%;
+
+      }
+      h3{
+        text-align:center;
+        text-transform:lowercase;
+        
+        margin-top: 1%;;        
+        margin-bottom: 1%;
+        }
+ 
