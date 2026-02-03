@@ -18,5 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         .catch(error => {
             console.error('Error fetching currency rates:', error);
+            currencyList.textContent = 'Kunde inte hämta valutakurser. Försök igen senare.';
         });
 });

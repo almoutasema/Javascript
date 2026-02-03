@@ -1,46 +1,41 @@
-body{
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    background-color: rgb(188, 220, 220);
-
-}
-a:link{
-    color: red;
-} 
- a:visited{
-    color: #bc6f6f;
- }
- 
- 
- a:hover{
-    font-size: 30px;
-    color: #007bff;
-    
-    
-}
-a:active{
-    color: aquamarine;
-} 
-h1{
+/* Tjänster page – uses common.css */
+.page-header h1 {
     text-align: center;
-    text-decoration: none;
+    font-size: clamp(1.2rem, 4vw, 1.6rem);
+    margin-top: 0;
+    margin-bottom: var(--spacing-md);
 }
-.tjänster{
-    text-align: left;
-    }
-    .tjänst1{
-        text-align: left;
-        margin-left: auto;
-        margin-right:auto;
-        margin-top:-1%;
-        margin-bottom: 1%;
 
-      }
-      h3{
-        text-align:center;
-        text-transform:lowercase;
-        
-        margin-top: 1%;;        
-        margin-bottom: 1%;
-        }
- 
+.tjänster {
+    text-align: left;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.tjänst {
+    padding: 0 4px;
+}
+
+.tjänst1 {
+    font-size: clamp(1rem, 2.5vw, 1.15rem);
+    margin-top: var(--spacing-md);
+    margin-bottom: 6px;
+    color: var(--text-dark);
+    text-transform: none;
+}
+
+.tjänst p {
+    margin: 0 0 var(--spacing-sm);
+    color: var(--text-muted);
+    line-height: 1.55;
+}
+
+@media (max-width: 575.98px) {
+    .tjänster {
+        padding: 0;
+    }
+
+    .tjänst1 {
+        margin-top: var(--spacing-sm);
+    }
+}

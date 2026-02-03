@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const convertButton = document.getElementById('convert');
     const resultParagraph = document.getElementById('result');
 
+    resultParagraph.textContent = 'Laddar växelkurser...';
+    convertButton.disabled = true;
+
     // Fetch currency rates from the API
     fetch('https://v6.exchangerate-api.com/v6/cb32a8d0ff4761177a0525f8/latest/USD')
         .then(response => response.json())
@@ -24,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 toCurrencySelect.appendChild(toOption);
             });
 
+            resultParagraph.textContent = '';
+            convertButton.disabled = false;
+
             // Convert currency on button click
             convertButton.addEventListener('click', () => {
                 const amount = parseFloat(amountInput.value);
@@ -31,36 +37,38 @@ document.addEventListener('DOMContentLoaded', () => {
                 const toCurrency = toCurrencySelect.value;
 
                 if (!isNaN(amount)) {
-                    const rate = data.conversion_rates[toCurrency];
-                    const convertedAmount = amount * rate;
+                    const fromRate = data.conversion_rates[fromCurrency];
+                    const toRate = data.conversion_rates[toCurrency];
+                    const convertedAmount = amount * (toRate / fromRate);
                     resultParagraph.textContent = `${amount} ${fromCurrency} = ${convertedAmount.toFixed(2)} ${toCurrency}`;
                 } else {
-                    resultParagraph.textContent = 'Please enter a valid amount.';
+                    resultParagraph.textContent = 'Ange ett giltigt belopp.';
                 }
             });
         })
         .catch(error => {
             console.error('Error fetching currency rates:', error);
+            resultParagraph.textContent = 'Kunde inte hämta växelkurser. Försök igen senare.';
         });
 
-function handleClickEvent() {
-    const messageParagraph = document.getElementById('message');
-    messageParagraph.textContent = 'För att hjälpa dig så snabbt som möjligt kan du ringa 0728286066 eller mejla info@se';
+    function handleClickEvent() {
+        const messageParagraph = document.getElementById('message');
+        messageParagraph.textContent = 'För att hjälpa dig så snabbt som möjligt kan du ringa 0728286066 eller mejla info@se';
 
-    // 10 sekunder 
-    setTimeout(() => {
-        messageParagraph.textContent = '';
-    }, 10000); // 10 
-}
+        // 10 sekunder 
+        setTimeout(() => {
+            messageParagraph.textContent = '';
+        }, 10000); // 10 
+    }
 
-//  koppla knap med `addEventListener` 
-document.getElementById('button').addEventListener('click', handleClickEvent);
+    //  koppla knap med `addEventListener` 
+    document.getElementById('button').addEventListener('click', handleClickEvent);
 
 
-const header = document.querySelector("#header-app");
-header.innerHTML="<h1>Al-Aseel valutaomvandlare</h1>"; 
+    const header = document.querySelector("#header-app");
+    header.innerHTML = "<h1>Al-Aseel valutaomvandlare</h1>";
 
-  });
+});
 
 
 

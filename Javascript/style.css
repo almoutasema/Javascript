@@ -1,113 +1,119 @@
-body{
-  display: flexbox;
-  background-color: rgb(188, 220, 220);
-  font-family: Arial, sans-serif;
- text-align: center;
-  display:inline-block;
-  opacity: 1;
-}
-#header-app{
-  color: black;
+/* Index page – uses common.css for base */
+#header-app {
+  color: var(--text-dark, #333);
   font-weight: bold;
-  margin: auto;
-  padding: auto;
-  display: flexbox;
-  }
-#button{
-  float:right;
-  background-color: #2bff00;
-  color:black;
-  
-}
-p{
-  color: #611818;
-}
-
-
-a:link{
-  color: red;
-}  
-a:visited{
-  color: #bc6f6f;
-}
-a:hover{
-  font-size: 30px;
-  color: #007bff;
-}
-a:active{
-  color: aquamarine;
-} 
- 
-
-.image-container {
+  margin: 0;
+  padding: var(--spacing-md, 20px);
   text-align: center;
-  opacity: 0.9;
 }
 
-.image-container img {
-  max-width: 40%;
-  height: auto;
-} 
-
-
-.nav-bar ul li{
-  float: left;
+p {
+  color: var(--text-muted, #611818);
 }
 
-
-.nav-bar ul li :hover{
-background:#185e8d ;
-border-radius: 10px;
-transition:.5s ease all;
-cursor: pointer;
-font-weight: bold;
-padding: .5em;
-text-decoration: none;
-margin: -1px;
-color: white !important;
-opacity: 1;
-transform: scale(.9) rotate(-5deg);}
-
-
-
-
-
+#button {
+  margin-top: 10px;
+  background-color: #2bff00;
+  color: #000;
+}
 
 .converter {
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
+  margin: var(--spacing-md, 20px) auto;
+  padding: var(--spacing-md, 20px);
+  border: 1px solid var(--border, #ccc);
+  width: 100%;
   max-width: 400px;
-  background-color: #f4f4f4;
+  background-color: var(--bg-card, #f4f4f4);
+  border-radius: var(--radius, 8px);
+  box-shadow: var(--shadow, 0 0 10px rgba(0, 0, 0, 0.1));
 }
 
-input, select, button {
-  margin: 10px;
-  padding: 5px;
+.converter input,
+.converter select,
+.converter button {
+  margin: 8px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid var(--border, #ccc);
 }
 
-button {
-  background-color: #007bff;
+.converter button {
+  background-color: var(--btn-primary, #007bff);
   color: #fff;
-  border: none;
   cursor: pointer;
 }
 
-.sist{
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: large;
+.converter button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
-#footer{
-  color: rgb(17, 13, 13);
-  font-family: 'Courier New', Courier, monospace;
-  font-size: small;
+.image-container {
+  text-align: center;
+  margin: var(--spacing-md, 20px) 0;
 }
 
+.image-container img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius, 8px);
+  box-shadow: var(--shadow, 0 0 10px rgba(0, 0, 0, 0.1));
+}
 
+.sist {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
+  max-width: 720px;
+  margin: var(--spacing-md, 20px) auto;
+  text-align: left;
+}
 
+.site-footer p {
+  margin: 0;
+  color: inherit;
+}
 
+/* Responsive – small screens */
+@media (max-width: 575.98px) {
+  .converter {
+    margin: 12px auto;
+    padding: 14px;
+    max-width: 100%;
+  }
 
+  .converter input,
+  .converter select,
+  .converter button {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+  }
 
+  .converter span {
+    display: block;
+    margin: 4px 0;
+  }
 
+  .image-container img {
+    max-width: 100%;
+  }
 
+  .sist {
+    padding: 0 8px;
+    font-size: 0.95rem;
+  }
+}
+
+/* Responsive – medium and up: limit image width on large screens */
+@media (min-width: 576px) {
+  .image-container img {
+    max-width: min(500px, 85%);
+  }
+}
+
+@media (min-width: 768px) {
+  .image-container img {
+    max-width: 520px;
+  }
+}

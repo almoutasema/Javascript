@@ -1,50 +1,37 @@
-a:link{
-    color: red;
-} 
- a:visited{
-    color: #bc6f6f;
- }
- 
- 
- a:hover{
-    font-size: 30px;
-    color: #007bff;
-}
-a:active{
-    color: aquamarine;
-} 
-
-body {
-    font-family: Arial, sans-serif;
-    background-attachment :fixed;
-    background-repeat: no-repeat;
-    text-align:center;
-    background-color: rgb(188, 220, 220);
-
-}
-
-h1 {
-    color: #333;
+/* Valutakurser page – uses common.css */
+.main-content h1 {
+    margin-top: 0;
+    font-size: clamp(1.25rem, 4vw, 1.6rem);
     font-weight: bold;
-    font-style: italic;
     font-variant: small-caps;
-    }
+}
 
 .currency-list {
-    margin: 20px auto;
-    width:58%;
-    padding: 20px;
-    max-width: 400px;
-    background-image: linear-gradient(#c0b4b4,#a08e8e);
-    background-color: #fff;
-    border-radius: 1em;
-    box-shadow: inset -1px -1px .9em rgba(0,0,0,.1),inset 1px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
+    margin: var(--spacing-md) auto;
+    width: 100%;
+    max-width: 480px;
+    padding: var(--spacing-md);
+    background: linear-gradient(#e8e4e4, #d8d0d0);
+    background-color: var(--bg-card);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border);
 }
 
 .currency-item {
     margin: 10px 0;
-    font-size: 18px;
+    font-size: clamp(0.95rem, 2vw, 1.1rem);
+    padding: 4px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
 
+.currency-item:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 575.98px) {
+    .currency-list {
+        padding: var(--spacing-sm);
+        margin: var(--spacing-sm) auto;
+    }
 }

@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="sv">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="common.css">
     <link rel="stylesheet" href="köp.css">
-    <script src="köp.js"></script>
-    <a href="index.html">tillbaka till huvud sida</a>
-    <title>köp pengar</title>
+    <title>Köp pengar</title>
 </head>
+
 <body>
-
-    <h1>Applikation för att köpa pengar </h1>  
-     <label for="amount">Belopp i Dollar</label>
-    <input type="number" id="amount" placeholder="Belopp i Dollar">
-    <button onclick="calculateExchange()">Beräkna</button>
-    <p id="result"></p>
+    <div class="back-link-wrap"><a href="index.html">← Tillbaka till startsidan</a></div>
+    <main class="main-content">
+        <h1>Applikation för att köpa pengar</h1>
+        <div class="converter-box">
+            <label for="amount">Belopp i dollar</label>
+            <input type="number" id="amount" placeholder="Belopp i dollar">
+            <button onclick="calculateExchange()">Beräkna</button>
+        </div>
+        <p id="result"></p>
+    </main>
+    <footer class="site-footer">
+        <p>Allt material är upphovsrättsskyddat © 2023</p>
+    </footer>
     <script src="köp.js"></script>
+</body>
 
-</body>
-</body>
+</html>

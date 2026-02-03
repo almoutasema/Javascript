@@ -18,7 +18,7 @@ function calculateExchange() {
             if (data.conversion_rates) {
                 const exchangeRate = data.conversion_rates["SEK"]; // välj målvaluta
                 const convertedAmount = totalAmount * exchangeRate;
-                resultElement.textContent = `Beloppet efter att ha tagit provisionen: $${totalAmount.toFixed(2)} USD = ${convertedAmount.toFixed(2)} 'SEK`;
+                resultElement.textContent = `Beloppet efter provision: $${totalAmount.toFixed(2)} USD = ${convertedAmount.toFixed(2)} SEK`;
             } else {
                 resultElement.textContent = "Det gick inte att hämta växelkurser ";
             }
